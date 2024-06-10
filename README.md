@@ -14,13 +14,13 @@ These are the steps I will follow:
 
 ***I'll briefly explain Association rules and the Apriori algorithm. If you're already familiar with these concepts, you can skip ahead.***
 
-## Association Rules:
+## Association Rules
 
 Imagine a grocery store. An association rule might state: "If a customer buys bread, then they are also likely to buy butter." This rule captures the relationship between frequently bought together items.
 
 Association rules are written in the format A -> B, where A (antecedent) is the item purchased first and B (consequent) is the item purchased together with A.
 
-## Apriori:
+## Apriori
 
 The Apriori algorithm efficiently finds frequently bought together items (itemsets) in your transaction data. `mlxtend` library provides a user-friendly implementation. You simply:
 
@@ -82,7 +82,7 @@ france_basket.head()
 ```
 The summarised output looks as follows:
 
-![Alt text](./)
+![Alt text](./Transactions%20from%20France%20table.jpg)
 
 # 3. Binary Encoding
 
@@ -98,11 +98,12 @@ def my_encode_units(x):
   return x > 0  # This returns True for positive values and False otherwise
 
 my_basket_sets = france_basket.map(my_encode_units)
+my_basket_sets.dtypes.head()  # boolean datatype
 ```
 
 ## Top 20 Most Frequent Products in France
 
-![Alt text](./)
+![Alt text](./Top%2020%20Most%20Frequent%20Products%20in%20France.png)
 
 # 4. Training the Model
 
@@ -131,13 +132,13 @@ my_rules.head(10)
 ```
 So these are the first 5 rules
 
-![Alt text](./)
+![Alt text](./First%205%20association%20rules%20table.jpg )
 
 # 5. Making Recommendations
 ​
 You can sort the rules in descending order by `Lift` and make relevant recommendations. Also consider the `support` and `confidence` values.
 
-![Alt text](./)
+![Alt text](./Association%20rules%20sorted%20by%20lift%20table.jpg)
 
 ## Strong Co-occurrence of Party Supplies
 
@@ -159,7 +160,7 @@ This section is relevant if you want to see rules on **Specific products** and m
 
 There are five outputs but we will focus on the one with a higher Lift
 
-![Alt text](./)
+![Alt text](./https://github.com/Wilfrida-Were/Market-Basket-Analysis/blob/main/Product%20specific%20rules%20table.jpg  )
 
 ## Strong Association for "ALARM CLOCK BAKELIKE RED"
 
