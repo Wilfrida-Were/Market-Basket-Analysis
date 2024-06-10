@@ -160,7 +160,7 @@ This section is relevant if you want to see rules on **Specific products** and m
 
 There are five outputs but we will focus on the one with a higher Lift
 
-![Alt text](./https://github.com/Wilfrida-Were/Market-Basket-Analysis/blob/main/Product%20specific%20rules%20table.jpg  )
+![Alt text](./Product%20specific%20rules%20table.jpg)
 
 ## Strong Association for "ALARM CLOCK BAKELIKE RED"
 
